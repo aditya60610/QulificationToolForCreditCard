@@ -1,0 +1,23 @@
+﻿@model QulificationToolForCreditCard.Models.CardDetails
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+    <div style="margin:10px; float: right;">
+        @Html.ActionLink("Go Back", "Index", "Customer")
+    </div>
+<div class="row">
+    <div>
+        <h3> Dear Customer,</h3>
+    </div>
+    <div>
+        <h4>
+            @Html.DisplayFor(modelItem => modelItem.Message)
+        </h4>
+    </div>
+    <br />
+    <div>
+        <span><img src="@Url.Content(ViewBag.CardDetails)" /> </span>
+    </div>
+</div>
